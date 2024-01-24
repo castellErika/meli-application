@@ -7,23 +7,22 @@ import { useForm } from '../hooks/useForm';
 import { useNavigate, useLocation } from 'react-router-dom';
 import queryString from 'query-string';
 
-
 export const SearchBox = () => {
     const navigate = useNavigate();
     const location = useLocation();
 
-    const {search = ''} = queryString.parse(location.search);
+    const {value = ''} = queryString.parse(location.search);
 
-    const { searchText, onInputChange} = useForm({
-      searchText: search
+    const { search, onInputChange} = useForm({
+      search: value
     });
 
-    const onSearchSubmit = (event) => {
-      event.preventDefault();
-      if (searchText.trim().length <= 1) return;
+    const onSearchSubmit = () => {
+      if (search.trim().length <= 1) return;
 
-      navigate('/items' + `?search=${ searchText }`)
+      navigate('/items' + `?search=${ search }`)
     }
+
 
   return (
     <>
@@ -44,8 +43,8 @@ export const SearchBox = () => {
                 <Form.Control
                   placeholder="Nunca dejes de buscar"
                   aria-label="Nunca dejes de buscar"
-                  name="searchText"
-                  value={ searchText }
+                  name="search"
+                  value={ search }
                   onChange={ onInputChange }
                   />
                 <Button variant="secondary" id="button-addon2" onClick={ onSearchSubmit }>

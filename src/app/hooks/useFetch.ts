@@ -16,8 +16,6 @@ export const useFetch = (url) => {
                 if(!response.ok) throw new Error(response.statusText);
 
                 const dataApi: Response = await response.json();
-                console.log(dataApi)
-
                 setDataState( prev => ({
                     ...prev,
                     loading: false,
@@ -39,8 +37,6 @@ export const useFetch = (url) => {
     useEffect(() => {
         if (dataState.data.length === 0) handleFetch();
     }, []);
-
-    console.log(dataState)
 
     return {
         ...dataState
