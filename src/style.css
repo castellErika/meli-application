@@ -1,0 +1,127 @@
+@font-face {
+  font-family: 'Proxima Nova extrabold';
+  src: url('/src/assets/font/proximanova-extrabold-webfont.woff2') format('woff2'),
+       url('/src/assets/font/proximanova-extrabold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('/src/assets/font/proximanova-regular-webfont.woff2') format('woff2'),
+       url('/src/assets/font/proximanova-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'Proxima Nova semibold';
+  src: url('/src/assets/font/proximanova-semibold-webfont.woff2') format('woff2'),
+       url('/src/assets/font/proximanova-semibold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --bs-tertiary-bg-rgb: 255, 230, 0;
+  --bs-border-radius: 0.2rem;
+  --bs-font-sans-serif: 'Proxima Nova';
+}
+
+body {
+  background-color: #ebebeb;
+}
+
+a {
+  color: var(--bs-body-color);
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  min-width: 100%;
+}
+
+.btn-secondary{
+  --bs-btn-bg: #eee;
+  --bs-btn-border-color: var(--bs-border-color);
+  --bs-btn-hover-bg: #ddd8d8;
+  --bs-btn-hover-border-color: var(--bs-border-color);
+  --bs-btn-active-bg: #ddd8d8;
+  --bs-btn-active-border-color: var(--bs-border-color);
+}
+
+.rounded {
+  border-radius: 4px;
+}
+
+.text-body-secondary {
+  font-size: 12px;
+}
+
+.form-control {
+  font-size: 18px;
+}
+
+.form-control:focus {
+  border: 1.5px solid #3483fa;
+  box-shadow: none;
+}
+
+
+.list-results {
+  border-bottom: 1px solid #eee;
+}
+
+.list-results img {
+  width: 180px;
+  height: 180px;
+}
+
+.list-results .card-title {
+  margin-bottom: 32px;
+}
+
+.list-results .card-title h5 {
+  font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 24px;
+  font-weight: normal;
+  margin-bottom: 0;
+}
+
+.list-results .card-text {
+  font-size: 18px;
+}
+
+.result-image {
+  width: 204px;
+  flex: none;
+}
+
+.content-detail {
+  background-color: var(--bs-white);
+}
+
+.content-detail h1 {
+  font-size: 24px;
+  font-family: 'Proxima Nova semibold';
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.content-detail h2 {
+  font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 46px;
+  margin-top: 10px;
+  margin-bottom: 16px;
+}
+
+.content-detail .btn {
+  --bs-btn-padding-x: 4.75rem;
+}
+
+.content-detail-row {
+  margin-left: 20px;
+}
